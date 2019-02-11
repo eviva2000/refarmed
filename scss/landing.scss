@@ -1,11 +1,31 @@
 $green-color: rgba(83, 112, 114, 0.9);
-
+$font-stack: "Barlow", sans-serif;
 body {
   background-color: antiquewhite;
+  font-family: $font-stack;
 }
 h2 {
-  color: $green-color;
+  color: black;
 }
-.order-wrapper {
+
+@mixin flex-display {
+  display: flex;
+  justify-content: space-around;
+}
+@mixin grid-display {
+  display: grid;
+  justify-content: space-around;
+}
+.orders-wrapper article {
+  @include flex-display;
+  padding: 1em;
+}
+article div {
   background-color: $green-color;
+}
+article #firstpart {
+  width: 35vw;
+}
+article #secondpart {
+  width: 50vw;
 }

@@ -8,10 +8,12 @@ function showCrops(crops) {
   console.log(crops);
   crops.forEach(function(crop) {
     const clone = temp.cloneNode(true);
-    clone.querySelector("h2 span").textContent = crop.slug;
-    clone.querySelector("h3 span").textContent = crop.acf.id;
-    clone.querySelector("p span").textContent = crop.acf.status;
-    clone.querySelector("h4 span").textContent = crop.acf.progress;
+    clone.querySelector("article h2 span").textContent = crop.title.rendered;
+    clone.querySelector("article h3 span").textContent = crop.acf.id;
+    clone.querySelector("article p span").textContent = crop.acf.status;
+    clone.querySelector("article h4 span").textContent = crop.acf.progress;
+    clone.querySelector("article #secondpart img").src =
+      crop.acf.img.sizes.medium;
     document.querySelector(".orders-wrapper").appendChild(clone);
   });
 }
