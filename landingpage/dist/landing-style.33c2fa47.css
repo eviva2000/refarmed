@@ -1,5 +1,130 @@
-body {
-  background-color: antiquewhite; }
+* {
+  margin: 0;
+  font-weight: 100; }
 
-h2 {
-  color: green; }
+body {
+  background: url(b2.170000ca.png) no-repeat;
+  background-position-x: 41%;
+  background-position-y: 47%;
+  background-size: 210%;
+  font-family: "Barlow", sans-serif;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  height: 100vh; }
+
+h2,
+h3,
+h4 {
+  font-weight: 100; }
+
+.orders-wrapper article {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 2.5em; }
+
+article > div {
+  background-color: #537072; }
+
+article #firstpart {
+  width: 30vw;
+  height: 13vh;
+  padding: 0 1em;
+  display: grid;
+  align-items: center; }
+  article #firstpart h1 span {
+    font-size: 25px;
+    font-weight: 100; }
+
+article #secondpart {
+  width: 50vw;
+  height: 13vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 2em; }
+
+#img-wrapper {
+  width: 10vw;
+  height: 13vw;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  #img-wrapper img {
+    position: absolute;
+    width: 13vw; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header img {
+    width: 6vw;
+    padding: 1em; }
+  header #logo {
+    width: 20vw;
+    padding-right: 4em; }
+  header #hi {
+    padding: 0 1em; }
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .heading .profile {
+    padding: 1em;
+    width: 6vw; }
+  .heading #logo {
+    width: 20vw;
+    padding-right: 2em; }
+  .heading h2,
+  .heading h3 {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif; }
+  .heading #hi {
+    padding-left: 1em; }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em; }
+  footer .routins {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background-color: #537072; }
+
+body > h1 {
+  padding-left: 1.4em;
+  font-size: 30px;
+  margin-top: 2%; }
+
+.status-page {
+  width: 100vw;
+  height: 100vh;
+  background-color: #537072;
+  position: absolute;
+  left: 100vw;
+  top: 0;
+  transition: all 0.5s; }
+  .status-page > h1 {
+    text-align: center;
+    font-family: "Barlow Condensed", sans-serif; }
+
+.hidden {
+  display: none; }
+
+.subtask {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 3em; }
+  .subtask img {
+    width: 22vw;
+    padding-left: 1em; }
+  .subtask h1 span {
+    font-size: 25px;
+    font-family: "Barlow Condensed", sans-serif; }
+  .subtask article {
+    padding: 0 1em 1em 1em; }

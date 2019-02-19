@@ -6,27 +6,73 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="landing-style.css" rel="stylesheet" />
     <link
-      href="https://fonts.googleapis.com/css?family=Barlow"
+      href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:300"
       rel="stylesheet"
     />
     <title>Refarmed App</title>
   </head>
   <body>
+    <header>
+      <section id="hi">
+        <h2>Hi User!</h2>
+        <h3></h3>
+      </section>
+      <img id="logo" src="asset/Herfra_logo (1).png" alt="herefra-logo" />
+
+      <section class="profile"><img src="asset/user2.png" alt="" /></section>
+    </header>
+    <h1>TODAY'S TASKS :</h1>
+
     <section class="orders-wrapper"></section>
     <template>
       <article>
         <div id="firstpart">
-          <h2><span></span></h2>
-          <h3>id: <span></span></h3>
-          <h4>progress <span></span> %</h4>
+          <h1><span></span></h1>
+          <h3>Order-id: <span></span></h3>
+          <!-- <h4>progress <span></span> %</h4> -->
         </div>
         <div id="secondpart">
-          <p><span></span></p>
-          <div></div>
-          <img alt="status-image" />
+          <p>Status: <span></span></p>
+          <p><span id="task-name"></span></p>
+          <div id="img-wrapper">
+            <img alt="status-image" />
+          </div>
         </div>
       </article>
     </template>
+    <footer>
+      <div class="routins"></div>
+      <div class="routins"></div>
+      <div class="routins"></div>
+    </footer>
+
+    <div class="status-page hidden">
+      <section class="heading">
+        <section id="hi">
+          <!-- <h2>Hi User!</h2> -->
+          <h3></h3>
+        </section>
+        <img id="logo" src="asset/Herfra_logo (2).png" alt="herefra-logo" />
+        <img class="profile" src="asset/user2.png" />
+      </section>
+      <section class="subtask">
+        <img src="asset/t1.png" />
+      </section>
+      <template class="subtask-temp">
+        <article>
+          <h1><span></span></h1>
+          <h3>Order-id: <span></span></h3>
+        </article>
+      </template>
+      <h1>Things to do:</h1>
+      <section class="prepare-sow hidden"><h1>Prepare and sow</h1></section>
+      <section class="prepare hidden"><h1>Prepare</h1></section>
+      <section class="sow hidden"><h1>Sow</h1></section>
+      <section class="blackout hidden"></section>
+      <section class="light hidden"></section>
+      <section class="harvest hidden"></section>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
