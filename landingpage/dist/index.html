@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="/landing-style.33c2fa47.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Barlow|Barlow+Condensed:300" rel="stylesheet">
-    <title>Refarmed App</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow:200|Barlow+Condensed:100" rel="stylesheet">
+    <title>Herfra App</title>
   <script src="/landing-style.33c2fa47.js"></script></head>
   <body>
     <header>
@@ -18,6 +18,27 @@
 
       <section class="profile"><img src="/user2.fd9e966d.png" alt=""></section>
     </header>
+   <!-- <label>Filter by -->
+    <!-- <select id="filter" onchange="doChange()">
+      <option value="overal">Overal progress
+      <option value="tasks">Tasks
+      <option value="status">Status
+    </select> -->
+<!-- <ul>
+  <li>Overal progress</li>
+  <li>Tasks</li>
+  <li>Status</li>
+</ul>
+  </label> -->
+  <div class="dropdown">
+    <button onclick="myFunction()" class="filter-btn">Filter Orders </button>
+    <div id="options-wrapper" class="hidden">
+      <a href="#" class="w3-bar-item w3-button">overal progress</a>
+      <a href="#" class="w3-bar-item w3-button">tasks</a>
+      <a href="#" class="w3-bar-item w3-button">status</a>
+    </div>
+  </div>
+
     <h1>TODAY'S TASKS :</h1>
 
     <section class="orders-wrapper"></section>
@@ -29,13 +50,21 @@
           <!-- <h4>progress <span></span> %</h4> -->
         </div>
         <div id="secondpart">
-          <p>Status: <span></span></p>
-          <p><span id="task-name"></span></p>
           <div id="img-wrapper">
-            <img alt="status-image">
+              <p><span id="task-name"></span></p>
+            <img id="prepare-img" src="/prepare.cd0ef472.png" class="hidden" alt="status-image">
+            <img id="sow-img" src="/planting4.515a2e31.png" class="hidden" alt="status-image">
+            <img id="blackout-img" src="/blackout-pic.b0b8ad8d.png" class="hidden" alt="status-image">
+            <img id="light-img" src="/light-pic.e40a15a2.png" class="hidden" alt="status-image">
+            <img id="harvest-img" src="/harvest-pic.baf43058.png" class="hidden" alt="status-image">
           </div>
+          <div id="status-img-wrapper">
+          <p>Status: <span></span></p>
+          <img id="paused" src="/pause.389aff1c.png" class="hidden">
+          <img id="in-process" src="/inprocessnew.90f8ee12.png" class="hidden">
+          <img id="in-queue" src="/inqueue2.a6f71098.png" class="hidden">
         </div>
-      </article>
+      </div></article>
     </template>
     <footer>
       <div class="routins"></div>
@@ -46,30 +75,61 @@
     <div class="status-page hidden">
       <section class="heading">
         <section id="hi">
-          <!-- <h2>Hi User!</h2> -->
           <h3></h3>
         </section>
         <img id="logo" src="/Herfra_logo (2).d4a441c8.png" alt="herefra-logo">
         <img class="profile" src="/user2.fd9e966d.png">
       </section>
       <section class="subtask">
-        <img src="/t1.2c8bc71b.png">
+        <!-- <img id="sow" class="hidden" src="asset/sow.png" />
+        <img id="blackout" class="hidden" src="asset/blackout.png" />
+        <img id="light" class="hidden" src="asset/light.png" />
+        <img id="harvest" class="hidden" src="asset/harvest.png" />
+        <img id="prepare-andsow" class="hidden" src="asset/t11.png" />
+        <img id="blackout2" class="hidden" src="asset/blackout2.png" />
+        <img id="light2" class="hidden" src="asset/light2.png" />
+        <img id="harvest2" class="hidden" src="asset/harvest2.png" /> -->
+        <div class="img-container">
+          <img src="/sunflower.d7339eb5.png" alt="">
+        </div>  
       </section>
+
       <template class="subtask-temp">
-        <article>
-          <h1><span></span></h1>
-          <h3>Order-id: <span></span></h3>
+        <article id="article">
+          <h1> <span></span></h1>
+          <h3>(Order-id: <span></span>)</h3>
         </article>
       </template>
-      <h1>Things to do:</h1>
-      <section class="prepare-sow hidden"><h1>Prepare and sow</h1></section>
-      <section class="prepare hidden"><h1>Prepare</h1></section>
+      <hr>
+      <section class="subtasks-container"></section>
+      <section class="prepare-sow ">
+        <section class="list">
+      </section>
+      <section class="action">
+      </section>
+    </section>
+      
       <section class="sow hidden"><h1>Sow</h1></section>
-      <section class="blackout hidden"></section>
+      <section class="blackout hidden"><h1>blackkkkk</h1></section>
       <section class="light hidden"></section>
-      <section class="harvest hidden"></section>
+      <section class="harvest hidden">HaRVEST</section>
+      <div class="btn-container">
+      <button id="start">Start</button>
+      <button id="pause">Pause</button>
+      <button id="done">Done</button>
+    </div>
     </div>
 
     <script src="/script.17228d4b.js"></script>
+    <script>
+      function doChange() {
+      let x=document.getElementById('filter').value;
+       console.log(x);
+}
+function myFunction() {
+  document.getElementById('options-wrapper').classList.toggle('hidden');
+  document.getElementById('options-wrapper').classList.toggle('slide-down');
+}
+    </script>
   </body>
 </html>

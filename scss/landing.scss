@@ -41,7 +41,7 @@ article > div {
 }
 article #firstpart {
   width: 30vw;
-  height: 13vh;
+  height: 12vh;
   padding: 0 1em;
   @include grid-display;
   h1 {
@@ -53,7 +53,7 @@ article #firstpart {
 }
 article #secondpart {
   width: 50vw;
-  height: 13vh;
+  height: 12vh;
   @include flex-display;
   padding-left: 2em;
 }
@@ -63,8 +63,19 @@ article #secondpart {
   position: relative;
   @include flex-display;
   img {
-    position: absolute;
     width: 13vw;
+  }
+  span {
+    font-size: 12px;
+    padding-right: 1em;
+  }
+}
+#status-img-wrapper {
+  @include flex-display;
+  font-size: 12px;
+  img {
+    width: 5vw;
+    padding-left: 1em;
   }
 }
 header {
@@ -72,7 +83,7 @@ header {
   justify-content: space-between;
   align-items: center;
   img {
-    width: 6vw;
+    width: 5vw;
     padding: 1em;
   }
   #logo {
@@ -89,7 +100,7 @@ header {
   align-items: center;
   .profile {
     padding: 1em;
-    width: 6vw;
+    width: 5vw;
   }
   #logo {
     width: 20vw;
@@ -131,11 +142,77 @@ body > h1 {
   & > h1 {
     text-align: center;
     font-family: $title-font;
+    padding: 0.5em 0 1em 0;
+    font-size: 48px;
+  }
+  hr {
+    margin: 0 5em 2em 5em;
+  }
+  .prepare,
+  .prepare-sow,
+  .blackout,
+  .light {
+    justify-content: space-around;
+
+    img {
+      width: 22vw;
+      padding-top: 1em;
+    }
+    ul li {
+      padding: 0.5em;
+      font-size: 21px;
+    }
+    h1 {
+      font-size: 35px;
+    }
+    .action {
+      text-align: center;
+    }
+  }
+  .prepare-sow {
+    .list {
+      img {
+        width: 42vw;
+      }
+    }
+  }
+  .img-container {
+    img {
+      position: absolute;
+      width: 35vw;
+      left: 53vw;
+      top: 15vh;
+    }
+  }
+  .ul-container {
+    @include flex-display;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 9vw;
+    top: 73vh;
+    button {
+      width: 17vw;
+      height: 5vw;
+      color: white;
+      border: white solid 1px;
+      border-radius: 30px;
+      background-color: #c58b76;
+      font-family: $title-font;
+      font-size: 25px;
+      margin: 0 0 20% 16%;
+    }
+  }
+  .action {
+    display: grid;
   }
 }
 .hidden {
   display: none;
 }
+
 .subtask {
   display: flex;
   flex-direction: column-reverse;
@@ -144,13 +221,62 @@ body > h1 {
     width: 22vw;
     padding-left: 1em;
   }
+  :nth-child(6),
+  :nth-child(7),
+  :nth-child(8) {
+    width: 30vw;
+  }
   h1 {
     span {
-      font-size: 25px;
+      font-size: 41px;
       font-family: $title-font;
     }
   }
   article {
     padding: 0 1em 1em 1em;
+    display: flex;
+    align-items: center;
+    h3 {
+      font-size: 20px;
+      padding: 0.2em 0 0 1em;
+    }
+  }
+}
+label {
+  padding-left: 5%;
+  select {
+    background-color: white;
+  }
+}
+.dropdown {
+  padding-left: 2.1em;
+  #options-wrapper {
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 4px;
+      display: grid;
+      font-size: 18px;
+    }
+    position: absolute;
+    top: 1em;
+    opacity: 0;
+  }
+  .filter-btn {
+    color: white;
+    font-size: 1em;
+  }
+}
+
+.slide-down {
+  animation: drop-down 0.3s forwards ease-out;
+}
+@keyframes drop-down {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(5.5em);
+    opacity: 1;
   }
 }

@@ -29,7 +29,7 @@ article > div {
 
 article #firstpart {
   width: 30vw;
-  height: 13vh;
+  height: 12vh;
   padding: 0 1em;
   display: grid;
   align-items: center; }
@@ -39,7 +39,7 @@ article #firstpart {
 
 article #secondpart {
   width: 50vw;
-  height: 13vh;
+  height: 12vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -53,15 +53,26 @@ article #secondpart {
   justify-content: space-around;
   align-items: center; }
   #img-wrapper img {
-    position: absolute;
     width: 13vw; }
+  #img-wrapper span {
+    font-size: 12px;
+    padding-right: 1em; }
+
+#status-img-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px; }
+  #status-img-wrapper img {
+    width: 5vw;
+    padding-left: 1em; }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center; }
   header img {
-    width: 6vw;
+    width: 5vw;
     padding: 1em; }
   header #logo {
     width: 20vw;
@@ -75,7 +86,7 @@ header {
   align-items: center; }
   .heading .profile {
     padding: 1em;
-    width: 6vw; }
+    width: 5vw; }
   .heading #logo {
     width: 20vw;
     padding-right: 2em; }
@@ -111,7 +122,67 @@ body > h1 {
   transition: all 0.5s; }
   .status-page > h1 {
     text-align: center;
-    font-family: "Barlow Condensed", sans-serif; }
+    font-family: "Barlow Condensed", sans-serif;
+    padding: 0.5em 0 1em 0;
+    font-size: 48px; }
+  .status-page hr {
+    margin: 0 5em 2em 5em; }
+  .status-page .prepare,
+  .status-page .prepare-sow,
+  .status-page .blackout,
+  .status-page .light {
+    justify-content: space-around; }
+    .status-page .prepare img,
+    .status-page .prepare-sow img,
+    .status-page .blackout img,
+    .status-page .light img {
+      width: 22vw;
+      padding-top: 1em; }
+    .status-page .prepare ul li,
+    .status-page .prepare-sow ul li,
+    .status-page .blackout ul li,
+    .status-page .light ul li {
+      padding: 0.5em;
+      font-size: 21px; }
+    .status-page .prepare h1,
+    .status-page .prepare-sow h1,
+    .status-page .blackout h1,
+    .status-page .light h1 {
+      font-size: 35px; }
+    .status-page .prepare .action,
+    .status-page .prepare-sow .action,
+    .status-page .blackout .action,
+    .status-page .light .action {
+      text-align: center; }
+  .status-page .prepare-sow .list img {
+    width: 42vw; }
+  .status-page .img-container img {
+    position: absolute;
+    width: 35vw;
+    left: 53vw;
+    top: 15vh; }
+  .status-page .ul-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+  .status-page .btn-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 9vw;
+    top: 73vh; }
+    .status-page .btn-container button {
+      width: 17vw;
+      height: 5vw;
+      color: white;
+      border: white solid 1px;
+      border-radius: 30px;
+      background-color: #c58b76;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: 25px;
+      margin: 0 0 20% 16%; }
+  .status-page .action {
+    display: grid; }
 
 .hidden {
   display: none; }
@@ -123,8 +194,48 @@ body > h1 {
   .subtask img {
     width: 22vw;
     padding-left: 1em; }
+  .subtask :nth-child(6),
+  .subtask :nth-child(7),
+  .subtask :nth-child(8) {
+    width: 30vw; }
   .subtask h1 span {
-    font-size: 25px;
+    font-size: 41px;
     font-family: "Barlow Condensed", sans-serif; }
   .subtask article {
-    padding: 0 1em 1em 1em; }
+    padding: 0 1em 1em 1em;
+    display: flex;
+    align-items: center; }
+    .subtask article h3 {
+      font-size: 20px;
+      padding: 0.2em 0 0 1em; }
+
+label {
+  padding-left: 5%; }
+  label select {
+    background-color: white; }
+
+.dropdown {
+  padding-left: 2.1em; }
+  .dropdown #options-wrapper {
+    position: absolute;
+    top: 1em;
+    opacity: 0; }
+    .dropdown #options-wrapper a {
+      color: white;
+      text-decoration: none;
+      padding: 4px;
+      display: grid;
+      font-size: 18px; }
+  .dropdown .filter-btn {
+    color: white;
+    font-size: 1em; }
+
+.slide-down {
+  animation: drop-down 0.3s forwards ease-out; }
+
+@keyframes drop-down {
+  50% {
+    opacity: 0; }
+  100% {
+    transform: translateY(5.5em);
+    opacity: 1; } }
