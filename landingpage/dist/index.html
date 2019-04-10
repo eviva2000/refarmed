@@ -4,65 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="/landing-style.33c2fa47.css" rel="stylesheet">
+    <link href="/landing-style.7f283322.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow:200|Barlow+Condensed:100" rel="stylesheet">
     <title>Herfra App</title>
-  <script src="/landing-style.33c2fa47.js"></script></head>
+  <script src="/landing-style.7f283322.js"></script></head>
   <body>
     <header>
       <section id="hi">
         <h2>Hi User!</h2>
         <h3></h3>
       </section>
-      <img id="logo" src="/Herfra_logo (1).8543f075.png" alt="herefra-logo">
+      <img id="logo" src="/Herfra_logo (1).a80a75c7.png" alt="herefra-logo">
 
-      <section class="profile"><img src="/user2.fd9e966d.png" alt=""></section>
+      <section class="profile"><img src="/user2.4cddfa34.png" alt=""></section>
     </header>
-   <!-- <label>Filter by -->
-    <!-- <select id="filter" onchange="doChange()">
-      <option value="overal">Overal progress
-      <option value="tasks">Tasks
-      <option value="status">Status
-    </select> -->
-<!-- <ul>
-  <li>Overal progress</li>
-  <li>Tasks</li>
-  <li>Status</li>
-</ul>
-  </label> -->
-  <div class="dropdown">
-    <button onclick="myFunction()" class="filter-btn">Filter Orders </button>
-    <div id="options-wrapper" class="hidden">
-      <a href="#" class="w3-bar-item w3-button">overal progress</a>
-      <a href="#" class="w3-bar-item w3-button">tasks</a>
-      <a href="#" class="w3-bar-item w3-button">status</a>
-    </div>
-  </div>
-
+    <section class="drop-andtitle-wrapper">
     <h1>TODAY'S TASKS :</h1>
-
+    <div class="dropdown">
+      <button class="filter-btn">Filter Orders</button>
+      <div id="options-wrapper" class="hidden">
+        <a href="#" id="all">All orders</a>
+        <div>
+          <a href="#" id="firstdrop">By Task</a>
+          <select id="filter1" size="5" class="hidden">
+            <option value="Prepare">Prepare </option><option value="Sow">Sow </option><option value="Blackout">Blackout </option><option value="Light">Light </option><option value="Harvest">Harvest </option></select>
+        </div>
+        <a href="#" class="">By Status</a>
+        <select id="filter2" size="2" onchange="doChange()" class="hidden">
+          <option value="In-queue">In queue </option><option value="in-process">In process </option></select>
+  </div>
+    </div>
+    </section>
     <section class="orders-wrapper"></section>
     <template>
       <article>
         <div id="firstpart">
           <h1><span></span></h1>
           <h3>Order-id: <span></span></h3>
-          <!-- <h4>progress <span></span> %</h4> -->
+          <div class="bar-container"></div>
         </div>
         <div id="secondpart">
           <div id="img-wrapper">
               <p><span id="task-name"></span></p>
-            <img id="prepare-img" src="/prepare.cd0ef472.png" class="hidden" alt="status-image">
-            <img id="sow-img" src="/planting4.515a2e31.png" class="hidden" alt="status-image">
-            <img id="blackout-img" src="/blackout-pic.b0b8ad8d.png" class="hidden" alt="status-image">
-            <img id="light-img" src="/light-pic.e40a15a2.png" class="hidden" alt="status-image">
-            <img id="harvest-img" src="/harvest-pic.baf43058.png" class="hidden" alt="status-image">
+            <img id="prepare-img" src="/prepare.1db0ac56.png" class="hidden" alt="status-image">
+            <img id="sow-img" src="/planting4.7c887191.png" class="hidden" alt="status-image">
+            <img id="blackout-img" src="/blackout-pic.54f8c53b.png" class="hidden" alt="status-image">
+            <img id="light-img" src="/light-pic.7a0762e8.png" class="hidden" alt="status-image">
+            <img id="harvest-img" src="/harvest-pic.985aa4a0.png" class="hidden" alt="status-image">
           </div>
           <div id="status-img-wrapper">
           <p>Status: <span></span></p>
-          <img id="paused" src="/pause.389aff1c.png" class="hidden">
-          <img id="in-process" src="/inprocessnew.90f8ee12.png" class="hidden">
-          <img id="in-queue" src="/inqueue2.a6f71098.png" class="hidden">
+          <img id="paused" src="/pause.a0f95e6e.png" class="hidden">
+          <img id="in-process" src="/inprocessnew.d906b356.png" class="hidden">
+          <img id="in-queue" src="/inqueue2.29921bca.png" class="hidden">
         </div>
       </div></article>
     </template>
@@ -77,8 +71,8 @@
         <section id="hi">
           <h3></h3>
         </section>
-        <img id="logo" src="/Herfra_logo (2).d4a441c8.png" alt="herefra-logo">
-        <img class="profile" src="/user2.fd9e966d.png">
+        <img id="logo" src="/Herfra_logo (2).a2aec105.png" alt="herefra-logo">
+        <img class="profile" src="/user2.4cddfa34.png">
       </section>
       <section class="subtask">
         <!-- <img id="sow" class="hidden" src="asset/sow.png" />
@@ -90,7 +84,7 @@
         <img id="light2" class="hidden" src="asset/light2.png" />
         <img id="harvest2" class="hidden" src="asset/harvest2.png" /> -->
         <div class="img-container">
-          <img src="/sunflower.d7339eb5.png" alt="">
+          <img src="/sunflower.4ef62194.png" alt="">
         </div>  
       </section>
 
@@ -116,11 +110,12 @@
       <div class="btn-container">
       <button id="start">Start</button>
       <button id="pause">Pause</button>
+      <button id="continue" class="hidden">Continue</button>
       <button id="done">Done</button>
     </div>
     </div>
 
-    <script src="/script.17228d4b.js"></script>
+    <script src="/script.aaf162d7.js"></script>
     <script>
       function doChange() {
       let x=document.getElementById('filter').value;

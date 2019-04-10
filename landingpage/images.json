@@ -1,6 +1,0 @@
-{
-  "prepare": {
-    "type": "greenhouse onlone app",
-    "logoLocation": "./asset/t1.png"
-  }
-}

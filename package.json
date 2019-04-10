@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "npm-run-all  --parallel landing-sass react-sass",
-    "landing-sass": "node-sass scss/landing.scss  landingpage/landing-style.css -w",
-    "react-sass": "node-sass scss/react.scss  refarmed-react/src/react-style.css -w"
+    "sass": "npm-run-all  --parallel landing-sass ",
+    "landing-sass": "node-sass scss/landing.scss  landingpage/landing-style.css -w"
   },
   "author": "elahe",
   "license": "ISC",

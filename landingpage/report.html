@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="landing-style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barlow:200|Barlow+Condensed:100"
+      rel="stylesheet"
+    />
+    <title>Report</title>
+  </head>
+  <body>
+    <main id="main-report">
+      <h1 style="text-align:center;padding-top: 2em">Overview of all orders by crop names</h1>
+      <div class="loader hidden"></div>
+
+      <div class="parent">
+        <div id="Sunflower" class="row hidden">
+          <div class="wrapper">
+          <h1>Sunflower</h1>
+          <h4>(<span></span>)</h4>
+        </div>
+          <section></section>
+        </div>
+        <div id="Peas" class="row hidden">
+            <div class="wrapper">   <h1>Peas</h1>  <h4>(<span></span>)</h4></div>
+          <section></section>
+        </div>
+        <div id="Mustard" class="row hidden">
+            <div class="wrapper">  <h1>Mustard</h1>  <h4>(<span></span>)</h4></div>
+          <section></section>
+        </div>
+        <div id="Wasabi" class="row hidden">
+            <div class="wrapper">  <h1>Wasabi</h1>  <h4>(<span></span>)</h4></div>
+          <section></section>
+        </div>
+        <div id="Purple-radish" class="row hidden">
+            <div class="wrapper">   <h1>Purple radish</h1>  <h4>(<span></span>)</h4></div>
+          <section></section>
+        </div>
+      </div>
+      <template id="reportTemp">
+        <article>
+          <h2>Order-id:<span></span></h2>
+          <p>Task:<span></span></p>
+          <h3>Delivery date:<span></span></p>
+        </article>
+      </template>
+      <div class="btn-container">
+          <button id="back2" class="hidden"><a href="index.html">Back</a></button>
+        </div>
+    </main>
+    <script src="report.js"></script>
+
+  </body>
+</html>
