@@ -13,5 +13,5 @@ npm install
 The application is created for the user in order to allow him to control the production and is connected to a data-base.The interface consists of a list of orders with their related status and related task which is feeded from data-base.
 for each order there is a control panel through which the user can Play , pause , complete or terminate the order's task and status.
 
-![Alt Text](http://artingineer.dk/rf-asset/harvest.png)
+![Alt Text](screenshot1.png)
 
